@@ -1,23 +1,20 @@
-import { PulseLoader } from "react-spinners";
 import Modal from "./components/Modal";
 import ResetButton from "./components/ResetButton";
+import SearchInput from "./components/SearchInput";
 import UsersList from "./components/UsersList";
-import SearchInput from "./components/useSearchLogic";
-import { useGetUsersQuery } from "./hooks/useGetUsers";
-import "./App.css";
 
 function App() {
-  const { isLoading, isSuccess } = useGetUsersQuery();
-
+  //TODO: add error message
   return (
-    <div className='App'>
-      <div>
-        <SearchInput />
-        <ResetButton />
+    <div className='flex justify-center w-full h-full py-16 bg-slate-100'>
+      <div className='max-w-md'>
+        <div className='flex justify-between gap-6 mb-6'>
+          <SearchInput />
+          <ResetButton />
+        </div>
+        <UsersList />
+        <Modal />
       </div>
-      <PulseLoader size={15} loading={isLoading} color='black' />
-      {isSuccess && <UsersList />}
-      <Modal />
     </div>
   );
 }

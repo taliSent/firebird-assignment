@@ -5,7 +5,7 @@ import { selectFilteredAdaptedUsers } from "../selectors/selectors";
 import { useGetUsersQuery } from "./useGetUsers";
 
 const useUsersListLogic = () => {
-  const { data } = useGetUsersQuery();
+  const { data, isLoading, isSuccess } = useGetUsersQuery();
   const filteredUsers = useSelector(selectFilteredAdaptedUsers);
 
   const dispatch = useDispatch();
@@ -15,6 +15,8 @@ const useUsersListLogic = () => {
 
   return {
     filteredUsers,
+    isLoading,
+    isSuccess,
   };
 };
 

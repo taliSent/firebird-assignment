@@ -11,16 +11,16 @@ const UserTextField: FC<UserTextFieldT> = ({ user }: UserTextFieldT) => {
   const { id, name, username, email } = user;
   const { highlight, handleClickUser, handleDeleteUser } =
     useUserTextFieldLogic();
-  //list
   return (
-    <div className=''>
-      <div id={`${id}`} className='list-item'>
-        <span onClick={handleClickUser}>
-          {highlight(name)} {highlight(username)} {highlight(email)}
-        </span>
-        <DeleteIcon id={id} onDelete={handleDeleteUser} />
-      </div>
-    </div>
+    <li
+      id={`${id}`}
+      className='flex justify-between items-center shadow-xl px-6 py-4 max-w-prose mb-6 bg-white'
+    >
+      <span onClick={handleClickUser} className='pr-2'>
+        {highlight(name)} {highlight(username)} {highlight(email)}
+      </span>
+      <DeleteIcon id={id} onDelete={handleDeleteUser} />
+    </li>
   );
 };
 export default UserTextField;

@@ -1,16 +1,24 @@
 import { FC } from "react";
+import { ClipLoader } from "react-spinners";
 import useUsersListLogic from "../hooks/useUsersListLogic";
 import { UserUI } from "../types/User";
 import UserTextField from "./UserTextField";
 
 const UsersList: FC = () => {
-  const { filteredUsers } = useUsersListLogic();
+  const { filteredUsers, isLoading, isSuccess } = useUsersListLogic();
 
   return (
     <>
-      {filteredUsers.map((user: UserUI) => (
-        <UserTextField user={user} key={user.id} />
-      ))}
+      <div className='flex justify-center'>
+        <ClipLoader size={15} loading={isLoading} color='#312e81' />
+      </div>
+      {isSuccess && (
+        <ul>
+          {filteredUsers.map((user: UserUI) => (
+            <UserTextField user={user} key={user.id} />
+          ))}
+        </ul>
+      )}
     </>
   );
 };

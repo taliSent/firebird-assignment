@@ -1,12 +1,9 @@
-import { useMemo, useRef } from "react";
+import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "../actions/actions";
 import { selectSelectedUserId } from "../selectors/selectors";
-import { User } from "../types/User";
-import { useGetUsersQuery } from "./useGetUsers";
 
-const useLogic = () => {
-  const { data } = useGetUsersQuery();
+const useModalLogic = () => {
   const ref = useRef();
   const selectedUserId = useSelector(selectSelectedUserId);
   const dispatch = useDispatch();
@@ -15,20 +12,19 @@ const useLogic = () => {
     dispatch(closeModal());
   };
 
-  const userInfo = useMemo(() => {
-    console.log("userInfo");
-    const user = data?.find((item: User) => item.id == selectedUserId);
-    return `Adress: ${user?.address.city} ${user?.address.street} ${user?.address.suite},  ${user?.address.zipcode}; 
-    Company: ${user?.company.name}`;
-  }, [selectedUserId, data]);
+  const handleBackdrop = (e: any) => {
+    if (!ref.current.contains(e.target)) {
+      handleCloseModal();
+    }
+  };
 
   return {
     handleCloseModal,
-    userInfo,
+    handleBackdrop,
     userId: selectedUserId,
-    ref,
     isOpen: !!selectedUserId,
+    ref,
   };
 };
 
-export default useLogic;
+export default useModalLogic;

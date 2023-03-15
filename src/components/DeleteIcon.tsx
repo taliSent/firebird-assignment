@@ -2,21 +2,25 @@ import { FC } from "react";
 
 //add extends
 type DeleteIconT = {
-  id: number;
+  id?: number;
+  size?: number;
   onDelete: (e: any) => void;
 };
 
-const DeleteIcon: FC<DeleteIconT> = ({ id, onDelete }: DeleteIconT) => {
+const DeleteIcon: FC<DeleteIconT> = ({
+  id,
+  onDelete,
+  size = 12,
+}: DeleteIconT) => {
   return (
     <img
       id={`${id}`}
       src={`/icon-cross.svg`}
       alt='delete user'
-      className='delete-button'
       onClick={onDelete}
-      width={12}
-      height={12}
-      style={{ display: "inline" }}
+      width={size}
+      height={size}
+      className='h-max'
     />
   );
 };
