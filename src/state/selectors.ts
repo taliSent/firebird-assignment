@@ -1,7 +1,6 @@
 import { createSelector } from "@reduxjs/toolkit";
-import { useSelector } from "react-redux";
-import { RootState } from "../store/store";
-import { User, UserUI } from "../types/User";
+import { RootState } from "./store";
+import { User } from "../types/User";
 import { extractData } from "../utils/utils";
 
 export const selectFilteredAdaptedUsers = createSelector(

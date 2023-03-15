@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
-import { clearFilter } from "../actions/actions";
-import { useGetUsersQuery } from "./useGetUsers";
+import { clearFilter } from "../../state/actions";
+import { useGetUsersQuery } from "../api/useGetUsers";
 
 const useResetLogic = () => {
   const { data } = useGetUsersQuery();

@@ -1,4 +1,4 @@
-import { FC, ImgHTMLAttributes } from "react";
+import { FC } from "react";
 
 interface DeleteIconT {
   id?: number;

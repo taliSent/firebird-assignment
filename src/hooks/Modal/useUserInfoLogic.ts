@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
-import { selectSelectedUserId } from "../selectors/selectors";
-import { findUserInfoById } from "../utils/utils";
-import { useGetUsersQuery } from "./useGetUsers";
+import { selectSelectedUserId } from "../../state/selectors";
+import { findUserInfoById } from "../../utils/utils";
+import { useGetUsersQuery } from "../api/useGetUsers";
 
+//TODO: fix imports
 const useUserInfoLogic = () => {
   const selectedUserId = useSelector(selectSelectedUserId);
   const { data } = useGetUsersQuery();

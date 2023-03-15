@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { usersApi } from "../hooks/useGetUsers";
+import { usersApi } from "../hooks/api/useGetUsers";
 import {
   filteredUsersReducer,
   selectedUserReducer,
   searchReducer,
-} from "../reducer/reducer";
+} from "./reducer";
 
 const store = configureStore({
   reducer: {

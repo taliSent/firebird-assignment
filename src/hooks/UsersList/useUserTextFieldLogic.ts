@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { deleteUser, openModal } from "../actions/actions";
-import withHighlight from "../components/withHighlight";
-import { selectSearchString } from "../selectors/selectors";
+import { deleteUser, openModal } from "../../state/actions";
+import withHighlight from "../../components/UsersList/withHighlight";
+import { selectSearchString } from "../../state/selectors";
 
 const useUserTextFieldLogic = () => {
   const searchString = useSelector(selectSearchString);

@@ -5,7 +5,7 @@ import {
   deleteUser,
   openModal,
   search,
-} from "../actions/actions";
+} from "./actions";
 import { User } from "../types/User";
 
 export const filteredUsersReducer = createReducer([] as User[], (builder) => {

@@ -1,8 +1,8 @@
-import { FC, ReactNode } from "react";
-import useUserTextFieldLogic from "../hooks/useUserTextFieldLogic";
-import { UserUI } from "../types/User";
-import DeleteIcon from "./DeleteIcon";
-import Paragraph from "./Paragraph";
+import { FC } from "react";
+import useUserTextFieldLogic from "../../hooks/UsersList/useUserTextFieldLogic";
+import { UserUI } from "../../types/User";
+import DeleteIcon from "../Shared/DeleteIcon";
+import Paragraph from "../Shared/Paragraph";
 
 type UserTextFieldT = {
   user: UserUI;
@@ -12,7 +12,7 @@ const UserTextField: FC<UserTextFieldT> = ({ user }: UserTextFieldT) => {
   const { id, name, username, email } = user;
   const { highlight, handleClickUser, handleDeleteUser } =
     useUserTextFieldLogic();
-  //grid-cols-1 md:grid-cols-3
+
   return (
     <li
       id={`${id}`}

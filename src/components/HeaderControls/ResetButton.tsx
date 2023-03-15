@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, FC } from "react";
-import useResetLogic from "../hooks/useResetLogic";
+import useResetLogic from "../../hooks/HeaderControls/useResetLogic";
 
 interface ResetButtonT extends ButtonHTMLAttributes<HTMLButtonElement> {}
 

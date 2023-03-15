@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
-import { search } from "../actions/actions";
-import { wait } from "../utils/utils";
+import { search } from "../../state/actions";
+import { wait } from "../../utils/utils";
 
 const useSearchLogic = () => {
   const dispatch = useDispatch();

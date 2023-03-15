@@ -1,6 +1,6 @@
 import { FC } from "react";
-import useModalLogic from "../hooks/useModalLogic";
-import DeleteIcon from "./DeleteIcon";
+import useModalLogic from "../../hooks/Modal/useModalLogic";
+import DeleteIcon from "../Shared/DeleteIcon";
 import UserInfo from "./UserInfo";
 
 const Modal: FC = () => {

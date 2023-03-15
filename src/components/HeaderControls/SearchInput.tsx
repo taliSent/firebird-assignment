@@ -1,5 +1,5 @@
 import { FC } from "react";
-import useSearchLogic from "../hooks/useSearchLogic";
+import useSearchLogic from "../../hooks/HeaderControls/useSearchLogic";
 
 const SearchInput: FC = () => {
   const { handleChangeSearch } = useSearchLogic();

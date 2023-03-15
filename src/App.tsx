@@ -1,10 +1,9 @@
-import Modal from "./components/Modal";
-import ResetButton from "./components/ResetButton";
-import SearchInput from "./components/SearchInput";
-import UsersList from "./components/UsersList";
+import Modal from "./components/Modal/Modal";
+import ResetButton from "./components/HeaderControls/ResetButton";
+import UsersList from "./components/UsersList/UsersList";
+import SearchInput from "./components/HeaderControls/SearchInput";
 
 function App() {
-  //TODO: add error message
   return (
     <div className='flex justify-center w-full h-full py-16 bg-slate-100'>
       <div className='max-w-full'>

@@ -1,7 +1,7 @@
 import { LegacyRef, RefObject, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { closeModal } from "../actions/actions";
-import { selectSelectedUserId } from "../selectors/selectors";
+import { closeModal } from "../../state/actions";
+import { selectSelectedUserId } from "../../state/selectors";
 
 const useModalLogic = () => {
   const ref = useRef() as RefObject<HTMLDivElement>;
