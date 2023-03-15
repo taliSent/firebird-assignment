@@ -5,9 +5,10 @@ import { selectFilteredAdaptedUsers } from "../selectors/selectors";
 import { useGetUsersQuery } from "./useGetUsers";
 
 const useUsersListLogic = () => {
-  const { data, isLoading, isSuccess } = useGetUsersQuery();
+  const { data, isLoading, isSuccess, isError } = useGetUsersQuery();
   const filteredUsers = useSelector(selectFilteredAdaptedUsers);
 
+  //TODO: fix that
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(clearFilter(data));
@@ -17,6 +18,7 @@ const useUsersListLogic = () => {
     filteredUsers,
     isLoading,
     isSuccess,
+    isError,
   };
 };
 

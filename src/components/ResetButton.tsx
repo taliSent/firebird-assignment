@@ -1,8 +1,7 @@
-import { FC } from "react";
+import { ButtonHTMLAttributes, FC } from "react";
 import useResetLogic from "../hooks/useResetLogic";
 
-//TODO: add extends
-type ResetButtonT = {};
+interface ResetButtonT extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
 const ResetButton: FC<ResetButtonT> = ({}: ResetButtonT) => {
   const { handleClearFilter } = useResetLogic();
