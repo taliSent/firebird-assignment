@@ -1,5 +1,7 @@
 import { FC } from "react";
 
+const IMG_PATH = "/firebird-assignment";
+
 interface DeleteIconT {
   id?: number;
   size?: number;
@@ -16,7 +18,7 @@ const DeleteIcon: FC<DeleteIconT> = ({
   return (
     <img
       id={`${id}`}
-      src={`/icon-cross.svg`}
+      src={`${IMG_PATH}/icon-cross.svg`}
       alt='delete user'
       onClick={onDelete}
       width={size}
