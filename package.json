@@ -1,8 +1,10 @@
 {
-  "name": "test-firebird",
+  "name": "firebird-assignment",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://talisent.github.io/firebird-assignment/",
+
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
