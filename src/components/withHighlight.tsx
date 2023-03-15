@@ -7,12 +7,12 @@ const withHighlight = (searchString: string) => (str: string) => {
   return searchArray.map((item, index) => {
     const isLast: boolean = index === searchArray.length - 1;
     return (
-      <>
-        <span key={item + index}>{item}</span>
+      <span key={item}>
+        <span>{item}</span>
         {!isLast && (
           <span className='bg-indigo-900 text-white'>{searchResult}</span>
         )}
-      </>
+      </span>
     );
   });
 };
