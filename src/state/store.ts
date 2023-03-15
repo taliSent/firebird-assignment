@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { usersApi } from "../hooks/api/useGetUsers";
+import { usersApi } from "../api/useGetUsers";
 import {
   filteredUsersReducer,
   selectedUserReducer,

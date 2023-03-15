@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearFilter } from "../../state/actions";
 import { selectFilteredAdaptedUsers } from "../../state/selectors";
-import { useGetUsersQuery } from "../api/useGetUsers";
+import { useGetUsersQuery } from "../../api/useGetUsers";
 
 const useUsersListLogic = () => {
   const { data, isLoading, isSuccess, isError } = useGetUsersQuery();
