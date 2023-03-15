@@ -1,7 +1,8 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import useUserTextFieldLogic from "../hooks/useUserTextFieldLogic";
 import { UserUI } from "../types/User";
 import DeleteIcon from "./DeleteIcon";
+import Paragraph from "./Paragraph";
 
 type UserTextFieldT = {
   user: UserUI;
@@ -11,15 +12,21 @@ const UserTextField: FC<UserTextFieldT> = ({ user }: UserTextFieldT) => {
   const { id, name, username, email } = user;
   const { highlight, handleClickUser, handleDeleteUser } =
     useUserTextFieldLogic();
+  //grid-cols-1 md:grid-cols-3
   return (
     <li
       id={`${id}`}
-      className='flex justify-between items-center shadow-xl px-6 py-4 max-w-prose mb-6 bg-white'
+      className='flex justify-between items-center shadow-xl px-6 py-4 mb-6 w-auto bg-white'
     >
-      <span onClick={handleClickUser} className='pr-2'>
-        {highlight(name)} {highlight(username)} {highlight(email)}
+      <span
+        onClick={handleClickUser}
+        className='grid grid-cols-1 md:grid-cols-3 gap-4 w-full pr-2.5 self-start'
+      >
+        <Paragraph title='Name' content={highlight(name)} order />
+        <Paragraph title='Username' content={highlight(username)} order />
+        <Paragraph title='email' content={highlight(email)} order />
       </span>
-      <DeleteIcon id={id} onDelete={handleDeleteUser} />
+      <DeleteIcon id={id} onDelete={handleDeleteUser} className='self-start' />
     </li>
   );
 };

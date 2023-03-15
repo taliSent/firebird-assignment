@@ -1,15 +1,16 @@
-import { FC } from "react";
+import { FC, ImgHTMLAttributes } from "react";
 
-//add extends
-type DeleteIconT = {
+interface DeleteIconT {
   id?: number;
   size?: number;
+  className?: string;
   onDelete: (e: any) => void;
-};
+}
 
 const DeleteIcon: FC<DeleteIconT> = ({
   id,
   onDelete,
+  className,
   size = 12,
 }: DeleteIconT) => {
   return (
@@ -20,7 +21,7 @@ const DeleteIcon: FC<DeleteIconT> = ({
       onClick={onDelete}
       width={size}
       height={size}
-      className='h-max'
+      className={`h-max ${className}`}
     />
   );
 };

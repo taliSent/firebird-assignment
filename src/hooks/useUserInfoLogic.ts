@@ -1,4 +1,3 @@
-import { FC, useEffect, useMemo } from "react";
 import { useSelector } from "react-redux";
 import { selectSelectedUserId } from "../selectors/selectors";
 import { findUserInfoById } from "../utils/utils";
