@@ -1,6 +1,5 @@
 import { FC } from "react";
-
-const IMG_PATH = "/firebird-assignment";
+import { IMG_PATH } from "../../constants";
 
 interface DeleteIconT {
   id?: number;
