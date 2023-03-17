@@ -5,12 +5,12 @@ interface CrossIconT {
   id?: number;
   size?: number;
   className?: string;
-  onClickCrossIcon: MouseEventHandler<HTMLImageElement>;
+  onClickCross: MouseEventHandler<HTMLImageElement>;
 }
 
 const CrossIcon: FC<CrossIconT> = ({
   id,
-  onClickCrossIcon,
+  onClickCross,
   className,
   size = 12,
 }: CrossIconT) => {
@@ -19,7 +19,7 @@ const CrossIcon: FC<CrossIconT> = ({
       id={`${id}`}
       src={`${IMG_PATH}/icon-cross.svg`}
       alt='delete user'
-      onClick={onClickCrossIcon}
+      onClick={onClickCross}
       width={size}
       height={size}
       className={`h-max ${className}`}

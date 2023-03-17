@@ -15,7 +15,7 @@ const Modal: FC = () => {
     >
       <div ref={ref} className='flex flex-col z-10 px-10 py-12 bg-white'>
         <h2 className='flex justify-between items-center text-3xl font-serif tracking-normal mb-6'>
-          User info <CrossIcon onClickCrossIcon={handleCloseModal} size={15} />
+          User info <CrossIcon onClickCross={handleCloseModal} size={15} />
         </h2>
         <UserInfo />
       </div>

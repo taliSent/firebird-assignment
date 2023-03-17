@@ -28,7 +28,7 @@ const UserTextField: FC<UserTextFieldT> = ({ user }: UserTextFieldT) => {
       </span>
       <CrossIcon
         id={id}
-        onClickCrossIcon={handleDeleteUser}
+        onClickCross={handleDeleteUser}
         className='self-start'
       />
     </li>
