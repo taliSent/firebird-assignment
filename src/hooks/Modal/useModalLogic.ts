@@ -1,7 +1,7 @@
-import { LegacyRef, RefObject, useRef } from "react";
+import { MouseEvent, RefObject, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { closeModal } from "../../state/actions";
-import { selectSelectedUserId } from "../../state/selectors";
+import { closeModal } from "@/state/actions";
+import { selectSelectedUserId } from "@/state/selectors";
 
 const useModalLogic = () => {
   const ref = useRef() as RefObject<HTMLDivElement>;
@@ -12,8 +12,9 @@ const useModalLogic = () => {
     dispatch(closeModal());
   };
 
-  const handleBackdrop = (e: any) => {
-    if (!ref.current?.contains(e.target)) {
+  const handleBackdrop = (e: MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLDivElement;
+    if (!ref.current?.contains(target)) {
       handleCloseModal();
     }
   };

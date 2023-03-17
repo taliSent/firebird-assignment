@@ -1,7 +1,7 @@
 import { FC } from "react";
-import useUserTextFieldLogic from "../../hooks/UsersList/useUserTextFieldLogic";
-import { UserUI } from "../../types/User";
-import DeleteIcon from "../Shared/DeleteIcon";
+import useUserTextFieldLogic from "@/hooks/UsersList/useUserTextFieldLogic";
+import { UserUI } from "@/types/User";
+import CrossIcon from "../Shared/CrossIcon";
 import Paragraph from "../Shared/Paragraph";
 
 type UserTextFieldT = {
@@ -26,7 +26,11 @@ const UserTextField: FC<UserTextFieldT> = ({ user }: UserTextFieldT) => {
         <Paragraph title='Username' content={highlight(username)} order />
         <Paragraph title='email' content={highlight(email)} order />
       </span>
-      <DeleteIcon id={id} onDelete={handleDeleteUser} className='self-start' />
+      <CrossIcon
+        id={id}
+        onClickCrossIcon={handleDeleteUser}
+        className='self-start'
+      />
     </li>
   );
 };

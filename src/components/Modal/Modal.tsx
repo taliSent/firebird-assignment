@@ -1,6 +1,6 @@
 import { FC } from "react";
-import useModalLogic from "../../hooks/Modal/useModalLogic";
-import DeleteIcon from "../Shared/DeleteIcon";
+import useModalLogic from "@/hooks/Modal/useModalLogic";
+import CrossIcon from "../Shared/CrossIcon";
 import UserInfo from "./UserInfo";
 
 const Modal: FC = () => {
@@ -15,7 +15,7 @@ const Modal: FC = () => {
     >
       <div ref={ref} className='flex flex-col z-10 px-10 py-12 bg-white'>
         <h2 className='flex justify-between items-center text-3xl font-serif tracking-normal mb-6'>
-          User info <DeleteIcon onDelete={handleCloseModal} size={15} />
+          User info <CrossIcon onClickCrossIcon={handleCloseModal} size={15} />
         </h2>
         <UserInfo />
       </div>

@@ -34,7 +34,7 @@ export const selectedUserReducer = createReducer(
       .addCase(openModal, (state, action) => {
         return action.payload;
       })
-      .addCase(closeModal, (state, action) => {
+      .addCase(closeModal, () => {
         return null;
       });
   }

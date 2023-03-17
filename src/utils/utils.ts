@@ -1,12 +1,11 @@
-import { useMemo } from "react";
-import { User } from "../types/User";
+import { User } from "@/types/User";
 
 export const extractData = (user: User) => {
   const { id, name, username, email } = user;
   return { id, name, username, email };
 };
 
-export const wait = (func: Function, ms = 1000) => {
+export const wait = (func: () => void, ms = 1000) => {
   setTimeout(() => func(), ms);
 };
 

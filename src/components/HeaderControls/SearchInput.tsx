@@ -1,8 +1,10 @@
-import { FC } from "react";
-import { IMG_PATH } from "../../constants";
-import useSearchLogic from "../../hooks/HeaderControls/useSearchLogic";
+import { FC, InputHTMLAttributes } from "react";
+import { IMG_PATH } from "@/constants";
+import useSearchLogic from "@/hooks/HeaderControls/useSearchLogic";
 
-const SearchInput: FC = () => {
+const SearchInput: FC<InputHTMLAttributes<HTMLInputElement>> = ({
+  ...props
+}) => {
   const { handleChangeSearch } = useSearchLogic();
   return (
     <div className='flex grow items-center px-4 py-2 bg-white'>
@@ -19,6 +21,7 @@ const SearchInput: FC = () => {
         placeholder='Search..'
         className='outline-none grow h-max'
         onChange={handleChangeSearch}
+        {...props}
       />
     </div>
   );

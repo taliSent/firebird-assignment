@@ -1,3 +1,5 @@
+//TO DO: fix eslint error; refactoring
+// eslint-disable-next-line react/display-name
 const withHighlight = (searchString: string) => (str: string) => {
   if (!searchString) return <span>{str}</span>;
   const regExp = new RegExp(searchString, "i");

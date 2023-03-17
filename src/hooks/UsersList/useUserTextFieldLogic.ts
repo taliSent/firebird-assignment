@@ -1,19 +1,23 @@
+import { MouseEvent } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteUser, openModal } from "../../state/actions";
-import withHighlight from "../../components/UsersList/withHighlight";
-import { selectSearchString } from "../../state/selectors";
+import { deleteUser, openModal } from "@/state/actions";
+import withHighlight from "@/components/UsersList/withHighlight";
+import { selectSearchString } from "@/state/selectors";
 
 const useUserTextFieldLogic = () => {
   const searchString = useSelector(selectSearchString);
   const highlight = withHighlight(searchString);
   const dispatch = useDispatch();
 
-  const handleDeleteUser = (e: any) => {
-    dispatch(deleteUser(e.target.id));
+  const handleDeleteUser = (e: MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLDivElement;
+    dispatch(deleteUser(+target.id));
   };
 
-  const handleClickUser = (e: any) => {
-    dispatch(openModal(e.currentTarget.parentNode.id));
+  const handleClickUser = (e: MouseEvent<HTMLDivElement>) => {
+    const target = e.currentTarget as HTMLDivElement;
+    const parent = target.parentNode as HTMLElement;
+    dispatch(openModal(+parent?.id));
   };
 
   return {
