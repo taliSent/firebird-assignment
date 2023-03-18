@@ -1,5 +1,5 @@
-import { IMG_PATH } from "@/constants";
 import { FC, MouseEventHandler } from "react";
+import iconCross from "@/img/icon-cross.svg";
 
 interface CrossIconT {
   id?: number;
@@ -17,7 +17,7 @@ const CrossIcon: FC<CrossIconT> = ({
   return (
     <img
       id={`${id}`}
-      src={`${IMG_PATH}/icon-cross.svg`}
+      src={iconCross}
       alt='delete user'
       onClick={onClickCross}
       width={size}

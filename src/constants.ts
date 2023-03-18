@@ -1,1 +1,1 @@
-export const IMG_PATH = "";
+export const IMG_PATH = "img";

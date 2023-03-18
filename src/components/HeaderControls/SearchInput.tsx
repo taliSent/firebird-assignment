@@ -1,6 +1,6 @@
 import { FC, InputHTMLAttributes } from "react";
-import { IMG_PATH } from "@/constants";
 import useSearchLogic from "@/hooks/HeaderControls/useSearchLogic";
+import iconSearch from "@/img/icon-search.svg";
 
 const SearchInput: FC<InputHTMLAttributes<HTMLInputElement>> = ({
   ...props
@@ -9,7 +9,7 @@ const SearchInput: FC<InputHTMLAttributes<HTMLInputElement>> = ({
   return (
     <div className='flex grow items-center px-4 py-2 bg-white'>
       <img
-        src={`${IMG_PATH}/icon-search.svg`}
+        src={iconSearch}
         alt='search user icon'
         width={17}
         height={17}
