@@ -1,6 +1,6 @@
 import { FC } from "react";
 import useUserInfoLogic from "../../hooks/Modal/useUserInfoLogic";
-import Paragraph from "../Shared/Paragraph";
+import Paragraph from "../shared/Paragraph";
 
 const UserInfo: FC = () => {
   const { addressStr, companyStr } = useUserInfoLogic();

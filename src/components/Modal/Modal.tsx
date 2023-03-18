@@ -1,6 +1,6 @@
 import { FC } from "react";
 import useModalLogic from "@/hooks/Modal/useModalLogic";
-import CrossIcon from "../Shared/CrossIcon";
+import CrossIcon from "@/components/shared/CrossIcon";
 import UserInfo from "./UserInfo";
 
 const Modal: FC = () => {

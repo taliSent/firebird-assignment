@@ -2,7 +2,7 @@ import { FC } from "react";
 import { ClipLoader } from "react-spinners";
 import useUsersListLogic from "@/hooks/UsersList/useUsersListLogic";
 import { UserUI } from "@/types/User";
-import ErrorMessage from "../Shared/ErrorMessage";
+import ErrorMessage from "../shared/ErrorMessage";
 import UserTextField from "./UserTextField";
 
 const UsersList: FC = () => {
