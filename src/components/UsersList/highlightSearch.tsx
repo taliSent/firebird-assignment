@@ -1,11 +1,10 @@
-const withHighlight = (searchString: string) => (str: string) => {
+const highlightSearch = (searchString: string) => (str: string) => {
   if (!searchString) return renderInitial(str);
   const regExp = new RegExp(searchString, "i");
   const searchResult = str.match(regExp)?.toString();
   if (!searchResult) return renderInitial(str);
   const searchArray = str.split(searchResult);
   const lastIndex = searchArray.length - 1;
-
   return searchArray.map((item, index) =>
     renderHighlighted(index, item, lastIndex, searchResult)
   );
@@ -30,4 +29,4 @@ const renderHighlighted = (
 
 const renderInitial = (str: string) => <span>{str}</span>;
 
-export default withHighlight;
+export default highlightSearch;
