@@ -5,10 +5,6 @@ export const extractData = (user: User) => {
   return { id, name, username, email };
 };
 
-export const wait = (func: () => void, ms = 1000) => {
-  setTimeout(() => func(), ms);
-};
-
 export const findUserInfoById = (
   data: User[] | undefined,
   selectedUserId: number | null

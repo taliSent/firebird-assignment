@@ -1,4 +1,4 @@
-import { MouseEvent } from "react";
+import { MouseEvent, useDeferredValue } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteUser, openModal } from "@/state/actions";
 import highlightSearch from "@/components/UsersList/highlightSearch";
@@ -6,7 +6,8 @@ import { selectSearchString } from "@/state/selectors";
 
 const useUserTextFieldLogic = () => {
   const searchString = useSelector(selectSearchString);
-  const highlight = highlightSearch(searchString);
+  const deferredString = useDeferredValue(searchString);
+  const highlight = highlightSearch(deferredString);
   const dispatch = useDispatch();
 
   const handleDeleteUser = (e: MouseEvent<HTMLDivElement>) => {

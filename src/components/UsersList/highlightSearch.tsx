@@ -18,7 +18,7 @@ const renderHighlighted = (
 ) => {
   const isLast: boolean = index === lastIndex;
   return (
-    <span key={item}>
+    <span key={item + index}>
       <span>{item}</span>
       {!isLast && (
         <span className='bg-indigo-900 text-white'>{searchResult}</span>
@@ -27,6 +27,6 @@ const renderHighlighted = (
   );
 };
 
-const renderInitial = (str: string) => <span>{str}</span>;
+const renderInitial = (str: string) => <span key={str}>{str}</span>;
 
 export default highlightSearch;
