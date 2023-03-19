@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, FC } from "react";
-import useResetLogic from "@/hooks/HeaderControls/useResetLogic";
+import useResetLogic from "src/hooks/HeaderControls/useResetLogic";
 
 const ResetButton: FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
   ...props

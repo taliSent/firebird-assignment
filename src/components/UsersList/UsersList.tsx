@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { ClipLoader } from "react-spinners";
-import useUsersListLogic from "@/hooks/UsersList/useUsersListLogic";
-import { UserUI } from "@/types/User";
+import useUsersListLogic from "src/hooks/UsersList/useUsersListLogic";
+import { UserUI } from "src/types/User";
 import ErrorMessage from "../shared/ErrorMessage";
 import UserTextField from "./UserTextField";
 

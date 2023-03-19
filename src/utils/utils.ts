@@ -1,4 +1,4 @@
-import { User } from "@/types/User";
+import { User } from "src/types/User";
 
 export const extractData = (user: User) => {
   const { id, name, username, email } = user;

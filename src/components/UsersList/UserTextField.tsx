@@ -1,6 +1,6 @@
 import { FC } from "react";
-import useUserTextFieldLogic from "@/hooks/UsersList/useUserTextFieldLogic";
-import { UserUI } from "@/types/User";
+import useUserTextFieldLogic from "src/hooks/UsersList/useUserTextFieldLogic";
+import { UserUI } from "src/types/User";
 import CrossIcon from "../shared/CrossIcon";
 import Paragraph from "../shared/Paragraph";
 

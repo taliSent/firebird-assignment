@@ -1,5 +1,5 @@
 import { FC, MouseEventHandler } from "react";
-import iconCross from "@/img/icon-cross.svg";
+import iconCross from "src/img/icon-cross.svg";
 
 interface CrossIconT {
   id?: number;

@@ -1,6 +1,6 @@
-import highlightSearch from "@/components/UsersList/highlightSearch";
-import { deleteUser, openModal } from "@/state/actions";
-import { selectSearchString } from "@/state/selectors";
+import highlightSearch from "src/components/UsersList/highlightSearch";
+import { deleteUser, openModal } from "src/state/actions";
+import { selectSearchString } from "src/state/selectors";
 import { MouseEvent } from "react";
 import { useDispatch, useSelector } from "react-redux";
 

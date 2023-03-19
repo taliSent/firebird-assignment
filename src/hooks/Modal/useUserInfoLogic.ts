@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import { selectSelectedUserId } from "@/state/selectors";
-import { findUserInfoById } from "@/utils/utils";
-import { useGetUsersQuery } from "@/api/useGetUsers";
+import { selectSelectedUserId } from "src/state/selectors";
+import { findUserInfoById } from "src/utils/utils";
+import { useGetUsersQuery } from "src/api/useGetUsers";
 
 const useUserInfoLogic = () => {
   const selectedUserId = useSelector(selectSelectedUserId);

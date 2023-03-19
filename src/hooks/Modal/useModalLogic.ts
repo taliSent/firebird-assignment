@@ -1,7 +1,7 @@
 import { MouseEvent, RefObject, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { closeModal } from "@/state/actions";
-import { selectSelectedUserId } from "@/state/selectors";
+import { closeModal } from "src/state/actions";
+import { selectSelectedUserId } from "src/state/selectors";
 
 const useModalLogic = () => {
   const ref = useRef() as RefObject<HTMLDivElement>;

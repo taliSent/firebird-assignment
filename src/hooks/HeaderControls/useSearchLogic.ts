@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
 import { useDispatch } from "react-redux";
-import { search } from "@/state/actions";
+import { search } from "src/state/actions";
 
 const useSearchLogic = () => {
   const dispatch = useDispatch();

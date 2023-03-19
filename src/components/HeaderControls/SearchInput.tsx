@@ -1,6 +1,6 @@
 import { FC, InputHTMLAttributes } from "react";
-import useSearchLogic from "@/hooks/HeaderControls/useSearchLogic";
-import iconSearch from "@/img/icon-search.svg";
+import useSearchLogic from "src/hooks/HeaderControls/useSearchLogic";
+import iconSearch from "src/img/icon-search.svg";
 
 const SearchInput: FC<InputHTMLAttributes<HTMLInputElement>> = ({
   ...props

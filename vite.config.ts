@@ -7,7 +7,7 @@ export default defineConfig({
   base: "/firebird-assignment/",
   resolve: {
     alias: {
-      "@": "/src",
+      src: "/src",
     },
   },
 });
