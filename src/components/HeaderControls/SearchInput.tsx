@@ -13,13 +13,13 @@ const SearchInput: FC<InputHTMLAttributes<HTMLInputElement>> = ({
         alt='search user icon'
         width={17}
         height={17}
-        className={`mr-4 text-red-400`}
+        className={`mr-4`}
       />
       <input
         aria-label='search input'
         type='text'
         placeholder='Search..'
-        className='outline-none grow h-max'
+        className='outline-transparent grow h-max'
         onChange={handleChangeSearch}
         {...props}
       />
