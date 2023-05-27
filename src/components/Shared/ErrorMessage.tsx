@@ -1,24 +1,10 @@
 import { FC } from "react";
 
-type ErrorMessageT = {
-  isError: boolean;
-  errorText?: string;
-};
-
-//TODO: make proper error handling
-const ErrorMessage: FC<ErrorMessageT> = ({
-  isError,
-  errorText,
-}: ErrorMessageT) => {
+const ErrorMessage: FC = () => {
   return (
-    <>
-      {isError && (
-        <div className='w-full bg-red-50 px-8 py-6 text-red-500'>
-          <div>Something went wrong</div>
-          <div>{errorText}</div>
-        </div>
-      )}
-    </>
+    <div className='w-full bg-red-50 px-8 py-6 text-red-500'>
+      <p>Can't fetch data</p>
+    </div>
   );
 };
 export default ErrorMessage;

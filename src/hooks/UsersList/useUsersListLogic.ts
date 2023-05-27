@@ -5,7 +5,7 @@ import { selectFilteredAdaptedUsers } from "src/state/selectors";
 import { useGetUsersQuery } from "src/api/useGetUsers";
 
 const useUsersListLogic = () => {
-  const { data, isLoading, isSuccess, isError } = useGetUsersQuery();
+  const { data, isLoading, isError, error } = useGetUsersQuery();
   const filteredUsers = useSelector(selectFilteredAdaptedUsers);
 
   //TODO: fix that
@@ -14,11 +14,11 @@ const useUsersListLogic = () => {
     dispatch(clearFilter(data));
   }, [dispatch, data]);
 
+  if (isError) throw error;
+
   return {
     filteredUsers,
     isLoading,
-    isSuccess,
-    isError,
   };
 };
 

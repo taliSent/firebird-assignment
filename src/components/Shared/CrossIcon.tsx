@@ -19,6 +19,7 @@ const CrossIcon: FC<CrossIconT> = ({
       id={`${id}`}
       src={iconCross}
       alt='delete user'
+      role='button'
       onClick={onClickCross}
       width={size}
       height={size}

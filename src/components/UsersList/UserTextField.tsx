@@ -1,7 +1,7 @@
 import { FC } from "react";
 import useUserTextFieldLogic from "src/hooks/UsersList/useUserTextFieldLogic";
 import { UserUI } from "src/types/User";
-import CrossIcon from "../shared/CrossIcon";
+import CrossIcon from "../Shared/CrossIcon";
 import Paragraph from "../shared/Paragraph";
 
 type UserTextFieldT = {

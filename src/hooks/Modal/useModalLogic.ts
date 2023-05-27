@@ -4,7 +4,7 @@ import { closeModal } from "src/state/actions";
 import { selectSelectedUserId } from "src/state/selectors";
 
 const useModalLogic = () => {
-  const ref = useRef() as RefObject<HTMLDivElement>;
+  const ref = useRef() as RefObject<HTMLDialogElement>;
   const selectedUserId = useSelector(selectSelectedUserId);
   const dispatch = useDispatch();
 
@@ -18,12 +18,13 @@ const useModalLogic = () => {
       handleCloseModal();
     }
   };
-
+  const visibility = !!selectedUserId ? "visible" : "invisible";
   return {
     handleCloseModal,
     handleBackdrop,
     userId: selectedUserId,
     isOpen: !!selectedUserId,
+    visibility,
     ref,
   };
 };
