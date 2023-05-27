@@ -7,14 +7,13 @@ type ParagraphT = {
 };
 
 const Paragraph: FC<ParagraphT> = ({ title, content, order }: ParagraphT) => {
+  const orderStyle = (num: number) => `${order ? `md:order-${num}` : ""}`;
   return (
     <>
-      <h4
-        className={`font-semibold text-indigo-800 ${order ? "md:order-1" : ""}`}
-      >
+      <h4 className={`font-semibold text-indigo-800 ${orderStyle(1)}`}>
         {`${title}:`}
       </h4>
-      <div className={`mb-6 ${order ? "md:order-2" : ""}`}>{content}</div>
+      <div className={`mb-6 ${orderStyle(2)}`}>{content}</div>
     </>
   );
 };
